@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div class="center jumbotron">
+    <h1>BitCoin Valuator</h1>
+    <h3>How much is your bitcoin worth in US dollars?</h3>
+  </div>
+  <div class="center jumbotron">
+    <%= form_tag("/valuation", method: 'get', remote: true, class: "form-inline" ) do %>
+      <div class="form-group">
+        <%= label_tag(:bitcoinQuantity, 'Bitcoin Qty: ', class:"control-label") %>
+        <%= text_field_tag(:bitcoinQuantity, nil, class: "form-control") %>
+        <%= submit_tag("Valuation >>", class: "btn btn-default") %>
+        <label class="control-label" hidden=true name="dollarValue" id="dollarValue"></label>
+      </div>
+    <% end %>
+  </div>
+</div>
