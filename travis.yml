@@ -1,0 +1,13 @@
+language: ruby
+cache:
+- bundler
+before_script:
+
+- bundle exec rake assets:precompile
+deploy:
+  provider: heroku
+  api_key:
+    secure: kG3bzTGMTmGacPSPTlcyeu4vzdBS6Hmz+bKbwKF0w8GC1aP2DhIgoyBPmv6RCcMybWuuaIT6DVnkAKu8Vx0vQXOTC136XSkZEfSUQjx9bLaRami6+WzhpaLQjrkmHmfjYZeE/AOY6AiFf6a5JOWIf5rezBjdGkDCp+5Fz3Dxz7DRdwoZBpadtfKoTuOB81MRf+zGcPaKYgbNbmeoUla8akCIp+JtXxEWEukPyMeLfPtV8fJIciqYyxpG6Vn5ODQLm5kIrq6tF0i6jYuYDK0mnjgbsGn0JsQUYIrxqdyL8HJmWUrbLtosrQ6hM7kfHYlQO+dxwje+QtRq7iDn63rcKBm/nlSeO43nT/LmToGFQmvhZR2nXCrnj6TidHS3UEj6iPO+i1X38Y1hRVH3zYvDwSctqo2STgw+NfPc9ac4iQHE2w9FduWB7d9GWPDq/m1EhjTKJpYHcjz/bJ30VTi3/DFarlM/VdjZ/dHzZXiw5JvH8Yvd3zgPOwLUXXzzhdOZ1PAlbFQpyUwJpoGSCxDXINuvUJ242ewxNIwkntvok9IVsv6Ol5KGegsoYsPIUUwnAzgYRVFu6ZpKcJgFPluL6wr0xTRmZZLgEnqNwGkS7Nf8IJ/obWiz9UALS0i1Gm6CmL+vbMFpDV5BiNn9tRpOpQa1HfGXgeKhWc3VeTLcS/M=
+  app: cisc684-a5
+  on:
+    repo: brycet516/cisc684-a5
