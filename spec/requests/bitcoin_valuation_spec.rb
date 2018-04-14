@@ -9,4 +9,10 @@ describe 'Bitcoin Valuation', type: :request do
     
       expect(response).to have_http_status(:success)
     end
+    
+    it 'renders the correct javascript' do
+      get '/valuation', params: { :bitcoinQuantity => bitcoinQuantity }, xhr: true
+      expect(response).to render_template('valuations/show')
+    end
+    
 end
