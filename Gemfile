@@ -12,6 +12,7 @@ gem 'rails', '~> 5.1.6'
 gem 'bootstrap-sass'
 
 gem 'jquery-rails'
+gem 'jquery-validation-rails'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
@@ -48,6 +49,7 @@ group :development, :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'rails-controller-testing'
+  gem 'webmock'
 end
 
 group :development do

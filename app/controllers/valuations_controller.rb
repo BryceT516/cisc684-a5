@@ -5,7 +5,6 @@ class ValuationsController < ApplicationController
     @dollar_value = pricer.value(params['bitcoinQuantity'].to_f)
     
     respond_to do |format|
-      format.html { redirect_to @home }
       format.js
     end
   end
