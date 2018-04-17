@@ -13,6 +13,9 @@
 
 //= require jquery3
 //= require jquery_ujs
+//= require jquery.validate
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+//= require bitcoin_form_validation
+
